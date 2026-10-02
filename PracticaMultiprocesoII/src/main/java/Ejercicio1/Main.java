@@ -2,16 +2,16 @@ package Ejercicio1;
 
 import java.util.Scanner;
 
-public class Main {
+public class  Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Escribe un número entero positivo:");
-        String dato = sc.nextLine();
+        String num = sc.nextLine();
 
         try {
             ProcessBuilder pb = new ProcessBuilder(
                     "java", "-cp", System.getProperty("java.class.path"),
-                    "Ejercicio1", dato);
+                    "Ejercicio1.Ejercicio1", num);
             pb.inheritIO();
             int codigo = pb.start().waitFor();
 
